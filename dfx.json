@@ -1,0 +1,37 @@
+{
+  "canisters": {
+    "Eco_backend": {
+      "main": "src/Eco_backend/main.mo",
+      "type": "motoko"
+    },
+    "Eco_frontend": {
+      "dependencies": [
+        "Eco_backend"
+      ],
+      "source": [
+        "src/Eco_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "Eco_frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
